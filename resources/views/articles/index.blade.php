@@ -1,5 +1,10 @@
 <x-layout>
     <x-navbar></x-navbar>
+    @if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
     @foreach($articles as $article)
     <div class="card" style="width: 18rem;">
         <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="...">

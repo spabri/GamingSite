@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Console;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,8 +26,9 @@ class ArticleController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('articles.create');
+    {   
+        $consoles= Console::all();
+        return view('articles.create',compact('consoles'));
     }
 
     /**
@@ -34,7 +36,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        Article::create(
+        $article= Article::create(
             [
                 'title' => $request->input('title'),
                 'category' => $request->input('category'),
@@ -43,6 +45,7 @@ class ArticleController extends Controller
                 'img' => $request->file('img')->store('public/images')
             ]
         );
+        $article->consoles()->attach($request->consoles);
         return redirect(route('articles.create'))->with('message', 'Articolo inserito con successo');
     }
 
@@ -59,7 +62,8 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        return view('articles.edit', compact('article'));
+        $consoles=Console::all();
+        return view('articles.edit', compact('article','consoles'));
     }
 
     /**
@@ -81,6 +85,7 @@ class ArticleController extends Controller
                 'img' => $img,
             ]
         );
+        $article->consoles()->sync($request->consoles);
         return redirect(route('articles.create'))->with('message', 'Articolo aggiornato');
     }
 
@@ -89,6 +94,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
+        $article->consoles()->detach($article->consoles);
         $article->delete();
         return redirect(route('articles.index'))->with('message',"Articolo eliminato");
     }

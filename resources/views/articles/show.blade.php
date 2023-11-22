@@ -8,11 +8,21 @@
                     <h5 class="card-title">{{ $article->title }}</h5>
                     <p class="card-text">{{ $article->category }}</p>
                     <p class="card-text">L'autore è {{ $article->user->name }}</p>
-
                     <p class="card-text mt-3">{{ $article->body }}</p>
-
-
+                    @if (count($article->consoles))
+                        
+                    <p>Disponibile per:</p>
+                    <ul>
+                    @foreach ($article->consoles as $console)
+                        <li>{{$console->name}}</li>                            
+                        @endforeach
+                    </ul>
+                    @else
+                    <p>Purtroppo non è disponibile per nessuna console.</p>
+                    @endif
                 </div>
+                
+                @if(Auth::id()==$article->user->id)
                 <div class="card-body">
                     <a href="{{route('articles.edit',compact('article'))}}" class="card-link">Modifica articolo</a>
                     
@@ -25,6 +35,8 @@
                     </form>
                     
                 </div>
+                @endif
+                
             </div>
         </div>
     </div>

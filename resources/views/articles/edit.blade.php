@@ -1,5 +1,6 @@
 <x-layout>
-    
+    <x-navbar>
+    </x-navbar>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10">
@@ -44,6 +45,17 @@
                         <label for="img" class="form-label">Modifica l'immagine</label>
                         <input name= "img" type="file" class="form-control" id="img">
                     </div>
+                    @foreach ($consoles as $console)
+                        <div class="form-check mb-3">
+                            <input 
+                            @if ($article->consoles->contains($console)) checked 
+                            @endif 
+                            class="form-check-input" type="checkbox" name="consoles[]"
+                                value="{{ $console->id }}" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"> {{ $console->name }}</label>
+                        </div>
+                    @endforeach
+                    
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
