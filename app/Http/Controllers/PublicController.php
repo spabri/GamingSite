@@ -12,7 +12,5 @@ class PublicController extends Controller
         return view('welcome',compact('articles'));
     }
 
-    public function contattaci(){
-        return view('contattaci');
-    }
+    
 }

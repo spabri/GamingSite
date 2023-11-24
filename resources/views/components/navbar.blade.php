@@ -50,7 +50,7 @@
                     
                     <ul class="dropdown-menu">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('contattaci.submit')}}">Contattaci</a>
+                            <a class="nav-link" href="{{route('mail.contattaci')}}">Contattaci</a>
                         </li>
                         <li class="nav-item">
                             <form method="POST" action="{{route('logout')}}">

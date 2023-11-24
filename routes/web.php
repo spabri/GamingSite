@@ -33,6 +33,6 @@ Route::put('articles/update/{article}', [ArticleController::class,'update'])->na
 Route::delete('articles/destroy/{article}', [ArticleController::class,'destroy'])->name('articles.destroy');
 
 // MAIL
-Route::get('/contattaci',[PublicController::class,'contattaci'])->name('contattaci');
+Route::get('mail/contattaci',[MailController::class,'contattaci'])->name('mail.contattaci');
 
-Route::post('/contattaci/submit',[MailController::class,'submit'])->name('contattaci.submit');
+Route::post('mail/contattaci/submit',[MailController::class,'submit'])->name('contattaci.submit');

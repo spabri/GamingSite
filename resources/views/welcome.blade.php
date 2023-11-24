@@ -1,5 +1,10 @@
 <x-layout>
     <x-navbar />
+    @if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
     <header class="my-3">
         <div class="swiper swiper1 mySwiper">
             <div class="swiper-wrapper">
