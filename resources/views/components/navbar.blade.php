@@ -26,7 +26,7 @@
                         Area personale
                     </a>
                     
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('register')}}">Registrati</a>
                         </li>

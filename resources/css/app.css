@@ -5,6 +5,10 @@
 :root{
     --main:rgb(27, 27, 27);
     --sec:whitesmoke;
+    --ter:rgb(43, 48, 53);
+    --qua:rgb(196, 160, 100);
+    --qui:rgb(249, 210, 97);
+    --ses: rgb(184, 184, 184);
 }
 body{
     font-family: 'Exo 2', sans-serif;
@@ -27,11 +31,11 @@ body{
 
 
 header{
-    height: 50vh;
+    height: 60vh;
   }
 /* SWIPER CAROUSEL */
 .swiper {
-    width: 99%;
+    width: 92%;
     height: 100%;
   }
 
@@ -50,4 +54,33 @@ header{
     height: 100%;
     object-fit: cover;
     object-position:center;
+  }
+
+  /* CARD INDEX */
+  .card-custom{
+    background-color: var(--main);
+    color:var(--sec);
+  }
+  .card-custom {
+    text-decoration: none;
+    color:var(--sec);
+  }
+  .card-custom:hover, .card-custom img:hover{
+    background: linear-gradient(rgba(255, 255, 255, 0.112),rgba(255, 255, 255, 0.112));
+  }
+  /* .btn-custom{
+    background-color: var(--qua);
+  }
+  .btn-custom:hover{
+    background-color: var(--qui);
+    color:var(--ses);
+  } */
+  .article-title{
+    text-transform: uppercase;
+  }
+  .article-category{
+    text-transform:uppercase;
+    font-size: small;
+    font-weight: lighter;
+    padding-bottom: 0;
   }

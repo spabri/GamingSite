@@ -18,7 +18,7 @@
                         @endforeach
                     </ul>
                     @else
-                    <p>Purtroppo non è disponibile per nessuna console.</p>
+                    <p>Purtroppo questo gioco non è disponibile per nessuna console.</p>
                     @endif
                 </div>
                 
@@ -31,7 +31,7 @@
                     <form action="{{route('articles.destroy',compact('article'))}}" method="POST">
                     @method('DELETE')
                     @csrf
-                    <button type="submit" class="card-link">Elimina articolo</button>
+                    <a type="submit" class="btn btn-custom card-link">Elimina articolo</a>
                     </form>
                     
                 </div>
