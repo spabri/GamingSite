@@ -22,7 +22,7 @@
                         </div>
                     @endif
                     <div class="mb-3">
-                        <label for="name" class="form-label">Username</label>
+                        <label for="name" class="form-label ">Username</label>
                         <input name= "name" type="text" class="form-control" id="name"
                             aria-describedby="username">
                     </div>

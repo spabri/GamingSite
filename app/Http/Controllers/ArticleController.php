@@ -83,6 +83,7 @@ class ArticleController extends Controller
                 'category' => $request->category,
                 'author' => Auth::user()->name,
                 'body' => $request->body,
+                'price'=>$request->input('price'),
                 'img' => $img,
             ]
         );
@@ -95,8 +96,9 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        $article->consoles()->detach($article->consoles);
-        $article->delete();
+    $article->consoles()->detach();
+
+    $article->delete();
         return redirect(route('articles.index'))->with('message',"Articolo eliminato");
     }
 }

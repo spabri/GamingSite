@@ -38,6 +38,11 @@
                         <textarea name="body" type="text" class="form-control" id="body">{{$article->body}}</textarea>
                     </div>
                     <div class="mb-3">
+                        <label for="price" class="form-label">Prezzo</label>
+                        <input value="{{$article->price}}"name="price" type="float" class="form-control"
+                            id="price">
+                    </div>
+                    <div class="mb-3">
                         <label for="category" class="form-label">immagine presente</label>
                         <img src="{{Storage::url($article->img)}}" alt="" height="200px">
                     </div>
@@ -62,4 +67,5 @@
             </div>
         </div>
     </div>
+    <x-footer></x-footer>
 </x-layout>
