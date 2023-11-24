@@ -5,8 +5,12 @@
             {{ session('message') }}
         </div>
     @endif
-    <div class="container">
+
+    <div class="container my-5">
         <div class="row">
+          <div class="col-12 my-3 d-flex justify-content-center">
+            <h2>Tutti i nostri prodotti</h2>
+          </div>
 
             @foreach ($articles as $article)
                 <a href="{{ route('articles.show', compact('article')) }}"
@@ -21,8 +25,8 @@
                               <h5 class="card-title article-title">{{ $article->title }}</h5>
                               @if ($article->price)
                                 
-                              <button class="btn btn-primary w-50 rounded-0">
-                                <div>€{{$article->price}}</div>
+                              <button class="btn btn-custom w-50 rounded-0">
+                                <div>€ {{$article->price}}</div>
                               </button>
                               @endif
                             

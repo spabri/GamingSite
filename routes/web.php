@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,3 +31,8 @@ Route::get('articles/edit/{article}',[ArticleController::class,'edit'])->name('a
 Route::put('articles/update/{article}', [ArticleController::class,'update'])->name('articles.update');
 
 Route::delete('articles/destroy/{article}', [ArticleController::class,'destroy'])->name('articles.destroy');
+
+// MAIL
+Route::get('/contattaci',[PublicController::class,'contattaci'])->name('contattaci');
+
+Route::post('/contattaci/submit',[MailController::class,'submit'])->name('contattaci.submit');
