@@ -42,6 +42,7 @@ class ArticleController extends Controller
                 'category' => $request->input('category'),
                 'user_id' => Auth::id(),
                 'body' => $request->input('body'),
+                'price'=>$request->input('price'),
                 'img' => $request->file('img')->store('public/images')
             ]
         );

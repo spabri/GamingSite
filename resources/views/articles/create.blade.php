@@ -37,6 +37,12 @@
                         <textarea name="body" type="text" class="form-control" id="body">{{ old('body') }}</textarea>
                     </div>
                     <div class="mb-3">
+                        <label for="price" class="form-label">Prezzo</label>
+                        <input value="{{ old('price') }}"name="price" type="float" class="form-control"
+                            id="price">
+                    </div>
+                    
+                    <div class="mb-3">
                         <label for="img" class="form-label">Inserisci un'immagine</label>
                         <input name= "img" type="file" class="form-control" id="img">
                     </div>
