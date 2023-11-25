@@ -42,13 +42,13 @@
                 <li class="nav-item">
                     <a class="nav-link @if(Route::currentRouteName()=='articles.create') active @endif" aria-current="page" href="{{route('articles.create')}}">Inserisci articolo</a>
                 </li>
-                <li class="nav-item dropdown ms-auto">
+                <li class="nav-item dropdown ms-lg-auto">
                     <a class="nav-link dropdown-toggle text-capitalize" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         {{Auth::user()->name}}
                     </a>
                     
-                    <ul class="dropdown-menu dropdown-menu-end rounded-0">
+                    <ul class="dropdown-menu dropdown-menu-md-end rounded-0">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('mail.contattaci')}}">Contattaci</a>
                         </li>

@@ -26,7 +26,7 @@ class ArticleRequest extends FormRequest
             'category'=>'required',
             'body'=>'required',
             'price'=>'required',
-            'img'=>'required|img'
+            'img'=>'required|image'
             
         ];
     }

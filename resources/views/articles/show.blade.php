@@ -6,7 +6,7 @@
                 <h2 class="text-uppercase">{{ $article->title }}</h2>
                 <h5>categoria: <span class="text-uppercase">{{ $article->category }}</span></h5>
             </div>
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-6">
                 <img src="{{ Storage::url($article->img) }}" class="w-100" alt="...">
             </div>
             <div class="col-12 col-md-4 mx-md-5">
@@ -34,8 +34,8 @@
 
                 {{-- @if (Auth::id() == $article->user->id) --}}
                 <div class="card-body">
-                    <button href="{{ route('articles.edit', compact('article')) }}"
-                        class="btn btn-custom rounded-0 card-link my-1">Modifica articolo</button>
+                    <a href="{{ route('articles.edit', compact('article')) }}"
+                        class="btn btn-custom rounded-0 card-link my-1">Modifica articolo</a>
 
                 </div>
                 <div class="card-body">
