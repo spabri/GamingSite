@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary "data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="{{route('home')}}">
             <img class="img-fluid imgCustom"src="/img/logo.png" alt="">
             <h5 class="mt-2">GameSite</h5>
         </a>
@@ -26,7 +26,7 @@
                         Area personale
                     </a>
                     
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul class="dropdown-menu dropdown-menu-end rounded-0">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('register')}}">Registrati</a>
                         </li>
@@ -48,7 +48,7 @@
                         {{Auth::user()->name}}
                     </a>
                     
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end rounded-0">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('mail.contattaci')}}">Contattaci</a>
                         </li>
