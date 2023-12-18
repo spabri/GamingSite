@@ -58,7 +58,7 @@
                             <input 
                             @if ($article->consoles->contains($console)) checked 
                             @endif 
-                            class="form-check-input" type="checkbox" name="consoles[]"
+                            class="form-check-input rounded-0" type="checkbox" name="consoles[]"
                                 value="{{ $console->id }}" id="flexCheckDefault">
                             <label class="form-check-label rounded-0" for="flexCheckDefault"> {{ $console->name }}</label>
                         </div>

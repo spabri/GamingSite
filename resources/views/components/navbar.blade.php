@@ -48,7 +48,7 @@
                         {{Auth::user()->name}}
                     </a>
                     
-                    <ul class="dropdown-menu dropdown-menu-md-end rounded-0">
+                    <ul class="dropdown-menu dropdown-menu-lg-end rounded-0">
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('mail.contattaci')}}">Contattaci</a>
                         </li>
